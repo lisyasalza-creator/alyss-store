@@ -1,0 +1,48 @@
+# Direktori Pengguna - PTS Pemrograman Web
+
+## Identitas Mahasiswa
+* **Nama:** Alisya Salza Nabilla
+* **NIM:** 2440304011
+* **Kelas:** [ISI KELASMU]
+* **Program Studi:** Teknik Komputer, Fakultas Teknik, Universitas Borneo Tarakan
+
+---
+
+## 1. Deskripsi Singkat Aplikasi
+Aplikasi **Direktori Pengguna** adalah *Interactive Data Dashboard* berbasis web yang mengonsumsi data dari REST API publik (DummyJSON Users). Aplikasi ini dirancang secara responsif dan aksesibel untuk menampilkan daftar pengguna, melakukan pencarian, filter data, serta menyajikan ringkasan statistik otomatis dari data yang dimuat.
+
+---
+
+## 2. Perhitungan Varian Berdasarkan NIM
+Tiga digit terakhir NIM **011**:
+* **Digit X = 1** $\rightarrow$ Dataset: **Users** (Direktori Pengguna)
+* **Digit Y = 1** $\rightarrow$ Fitur Utama: **Filter data + statistik sederhana**
+* **Digit Z = 1** $\rightarrow$ Validasi Form: **Email valid + konfirmasi email**
+* **Challenge ($C$)** $\rightarrow$ $S = X + Y + Z = 1 + 1 + 1 = 3$. $C = 3 \pmod 4 = 3$ $\rightarrow$ **Toggle Grid/List; pilihan pengguna disimpan pada localStorage**.
+
+---
+
+## 3. Dataset & Endpoint REST API
+* **Sumber API:** DummyJSON REST API
+* **Endpoint:** `https://dummyjson.com/users?limit=0`
+* **Metode:** GET
+
+---
+
+## 4. Cara Menjalankan Proyek (Laragon 5)
+1. Pastikan **Laragon 5** sudah aktif (Apache berjalan).
+2. Letakkan folder proyek di direktori: `C:\laragon\www\pemweb-obe`
+3. Buka browser dan akses melalui URL: `http://localhost/pemweb-obe/`
+
+---
+
+## 5. Screenshot Tampilan
+* **Desktop View:** *(Tambahkan screenshot tampilan desktop)*
+* **Mobile View:** *(Tambahkan screenshot tampilan mobile)*
+
+---
+
+## 6. AI Usage Log
+| Tanggal | Alat / AI | Tujuan Penggunaan | Ringkasan Prompt | Bagian yang Digunakan | Verifikasi & Modifikasi |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| 15 Okt 2026 | Gemini AI | Diskusi konseptual & struktur form | Menanyakan perbaikan validasi form | Validasi form kontak | Divalidasi dan disesuaikan mandiri |

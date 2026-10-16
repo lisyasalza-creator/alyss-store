@@ -1,0 +1,464 @@
+:root {
+    --pink: #f7a0b7;
+    --pink-muda: #fff0f5;
+    --pink-lembut: #fae8ed;
+    --merah: #b62424;
+    --coklat: #6f1818;
+    --teks: #2b1616;
+    --putih: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--teks);
+    background: var(--pink-lembut);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--coklat);
+    outline-offset: 3px;
+}
+
+/* Bagian atas dan menu */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    padding: 0.75rem 6%;
+    background: var(--pink);
+}
+
+.logo {
+    flex-shrink: 0;
+    color: var(--putih);
+    font-size: 1.65rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.logo span {
+    color: var(--coklat);
+}
+
+.identitas {
+    color: var(--coklat);
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.site-header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.site-header nav a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    color: var(--putih);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.site-header nav a:hover {
+    color: var(--coklat);
+}
+
+/* Home dibuat setinggi layar supaya fokus ke bagian utama */
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    padding: 3rem 8%;
+    text-align: center;
+    background: #ffc4d1;
+}
+
+.hero h1 {
+    max-width: 52rem;
+    color: var(--coklat);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.15;
+}
+
+.hero p {
+    max-width: 38rem;
+    color: var(--coklat);
+    font-size: 1.1rem;
+}
+
+.cta,
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 2rem;
+    padding: 0.85rem 2rem;
+    background: var(--merah);
+    color: var(--putih);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.cta {
+    margin-top: 0.3rem;
+}
+
+.cta:hover,
+.btn:hover {
+    background: var(--coklat);
+}
+
+/* Produk */
+.produk {
+    padding: 4rem 7%;
+    background: var(--pink-lembut);
+    scroll-margin-top: 90px;
+}
+
+.produk h2,
+.kontak h2 {
+    color: var(--coklat);
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+.pengantar-produk {
+    margin: 0.5rem 0 1.5rem;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.65rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.toolbar label {
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #e5c5ce;
+    border-radius: 0.65rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--putih);
+    color: var(--teks);
+    font: inherit;
+}
+
+.toolbar input,
+.toolbar select {
+    width: auto;
+    min-width: 13rem;
+}
+
+.statistik {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    border-left: 5px solid var(--merah);
+    border-radius: 0.8rem;
+    background: var(--putih);
+}
+
+.statistik h3 {
+    margin-bottom: 0.75rem;
+    color: var(--coklat);
+}
+
+.statistik ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+}
+
+.statistik li span,
+.statistik li strong {
+    display: block;
+}
+
+.statistik li span {
+    font-size: 0.9rem;
+}
+
+.statistik li strong {
+    overflow-wrap: anywhere;
+}
+
+#status {
+    min-height: 1.7rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+#status.error {
+    padding: 0.75rem 1rem;
+    border: 1px solid #8a0f0f;
+    border-radius: 0.65rem;
+    background: #ffe3e3;
+    color: #8a0f0f;
+}
+
+.spinner {
+    display: inline-block;
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: 0.5rem;
+    border: 3px solid var(--pink);
+    border-top-color: var(--merah);
+    border-radius: 50%;
+    vertical-align: middle;
+    animation: putar 0.8s linear infinite;
+}
+
+@keyframes putar {
+    to { transform: rotate(360deg); }
+}
+
+.daftar-produk {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 1.25rem;
+}
+
+.daftar-produk article {
+    height: 100%;
+    padding: 1rem;
+    border-radius: 0.9rem;
+    background: var(--putih);
+    box-shadow: 0 3px 12px rgba(111, 24, 24, 0.1);
+}
+
+.daftar-produk img {
+    width: 100%;
+    height: 190px;
+    margin-top: 0.5rem;
+    border-radius: 0.6rem;
+    background: var(--pink-lembut);
+    object-fit: contain;
+}
+
+.daftar-produk h3 {
+    margin: 0.7rem 0 0.25rem;
+    color: var(--coklat);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.kategori {
+    color: #604747;
+    font-size: 0.85rem;
+}
+
+.harga {
+    margin-top: 0.4rem;
+    color: var(--merah);
+    font-weight: 700;
+}
+
+/* Kontak: latar lembut dan form putih di tengah */
+.kontak {
+    padding: 4rem 7%;
+    background: var(--pink-muda);
+    scroll-margin-top: 50px;
+}
+
+.judul-kontak {
+    max-width: 58rem;
+    margin: 0 auto 1.5rem;
+}
+
+.judul-kontak p {
+    margin-top: 0.35rem;
+    color: #603d46;
+}
+
+.form-kontak {
+    width: 100%;
+    max-width: 58rem;
+    margin: 1.5rem auto 0;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.form-kontak label {
+    margin-top: 0.35rem;
+    font-weight: 600;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    border-color: #d9dce3;
+}
+
+.form-kontak textarea {
+    min-height: 6rem;
+    resize: vertical;
+}
+
+.form-kontak input[aria-invalid="true"] {
+    border-color: #8a0f0f;
+}
+
+.error {
+    min-height: 0;
+    color: #8a0f0f;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.btn {
+    align-self: flex-start;
+    margin-top: 0.7rem;
+    min-width: 11rem;
+}
+
+#sukses {
+    color: #18765d;
+    font-weight: 600;
+}
+
+/* Bagian bawah */
+.site-footer {
+    padding: 1.25rem 6%;
+    background: var(--pink);
+    color: var(--coklat);
+    text-align: center;
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 800px) {
+    .site-header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.8rem 5%;
+    }
+
+    .identitas {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .hero {
+        min-height: calc(100svh - 120px);
+    }
+
+    .produk,
+    .kontak {
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-header {
+        gap: 0.5rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .site-header nav ul {
+        gap: 1rem;
+    }
+
+    .site-header nav a {
+        font-size: 1rem;
+    }
+
+    .hero {
+        min-height: calc(100svh - 110px);
+        padding: 2.5rem 6%;
+    }
+
+    .hero h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .toolbar input,
+    .toolbar select {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .daftar-produk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+    }
+
+    .daftar-produk article {
+        padding: 0.7rem;
+    }
+
+    .daftar-produk img {
+        height: 120px;
+    }
+
+    .form-kontak {
+        padding: 1.2rem;
+    }
+
+    .produk h2,
+    .kontak h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .spinner { animation: none; }
+    .cta, .btn { transition: none; }
+}

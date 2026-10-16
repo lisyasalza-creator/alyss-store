@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alyss Store, dashboard produk hadiah dan dekorasi.">
+    <title>Alyss Store - Hadiah dan Dekorasi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="js/script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="#home" class="logo" aria-label="Alyss Store, ke Home">Alyss<span>Store</span></a>
+        <p class="identitas">Alisya Salza Nabilla - 2440304011</p>
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produk">Produk</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="judul-home">
+            <h1 id="judul-home">Temukan hadiah dan dekorasi yang pas untuk harimu</h1>
+            <p>Cari produk, saring berdasarkan kategori, dan lihat ringkasan harganya.</p>
+            <a href="#produk" class="cta">Lihat Produk</a>
+        </section>
+
+        <section class="produk" id="produk" aria-labelledby="judul-produk">
+            <h2 id="judul-produk">Produk Kami</h2>
+            <p class="pengantar-produk">Temukan inspirasi produk dan lihat informasi harga dengan mudah.</p>
+
+            <form class="toolbar" role="search" onsubmit="return false">
+                <label for="input-cari">Cari produk</label>
+                <input type="search" id="input-cari" placeholder="Contoh: lipstick" autocomplete="off">
+
+                <label for="filter-kategori">Kategori</label>
+                <select id="filter-kategori">
+                    <option value="all">Semua kategori</option>
+                </select>
+            </form>
+
+            <section class="statistik" aria-labelledby="judul-statistik">
+                <h3 id="judul-statistik">Ringkasan produk</h3>
+                <ul>
+                    <li><span>Jumlah produk</span><strong id="stat-jumlah">-</strong></li>
+                    <li><span>Rata-rata harga</span><strong id="stat-rata">-</strong></li>
+                    <li><span>Produk termahal</span><strong id="stat-mahal">-</strong></li>
+                    <li><span>Jumlah kategori</span><strong id="stat-kategori">-</strong></li>
+                </ul>
+            </section>
+
+            <p id="status" role="status" aria-live="polite"></p>
+            <ul id="daftar-produk" class="daftar-produk" aria-label="Daftar produk"></ul>
+        </section>
+
+        <section class="kontak" id="kontak" aria-labelledby="judul-kontak">
+            <header class="judul-kontak">
+                <h2 id="judul-kontak">Kontak Kami</h2>
+                <p>Punya pertanyaan atau ingin informasi lebih lanjut? Isi form di bawah ini, ya!</p>
+            </header>
+
+            <form id="form-kontak" class="form-kontak" novalidate autocomplete="off">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" autocomplete="off" aria-describedby="err-nama">
+                <p class="error" id="err-nama"></p>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Contoh: kamu@email.com" autocomplete="off" aria-describedby="err-email">
+                <p class="error" id="err-email"></p>
+
+                <label for="email2">Konfirmasi email</label>
+                <input type="email" id="email2" name="email2" placeholder="Ulangi email" autocomplete="off" aria-describedby="err-email2">
+                <p class="error" id="err-email2"></p>
+
+                <label for="pesan">Pesan</label>
+                <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan kamu di sini..." autocomplete="off"></textarea>
+                <p class="error" id="err-pesan"></p>
+                
+                <button type="submit" class="btn">Kirim Pesan</button>
+                <p id="sukses" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Alisya Salza Nabilla - NIM 2440304011 </p>
+    </footer>
+</body>
+</html>
